@@ -8,7 +8,6 @@ def parse(url):
     page = requests.get(url=url,headers=user_agent)
     soup = BeautifulSoup(page.text,"html.parser")
     vakancii = soup.findAll('div', class_='serp-item')
-    count = 0
     spisok2 = []
     print(len(vakancii))
     for i in vakancii:
